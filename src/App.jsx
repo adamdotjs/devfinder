@@ -24,7 +24,7 @@ const App = () => {
 				<div className="flex flex-col | max-w-xl lg:max-w-[730px] | gap-4 sm:gap-6 mx-auto md:mt-36">
 					<Header />
 					<Search handleSubmit={handleSubmit} />
-					<section className="grid lg:grid-cols-[117px_1fr] | gap-6 px-6 py-8 sm:p-12 sm:gap-8 | bg-darkwhite dark:bg-cloudburst | shadow-block dark:shadow-none | rounded-xl">
+					<main className="grid lg:grid-cols-[117px_1fr] | gap-6 px-6 py-8 sm:p-12 sm:gap-8 | bg-darkwhite dark:bg-cloudburst | shadow-block dark:shadow-none | rounded-xl">
 						{error && (
 							<div className="mr-4 | text-sunset whitespace-nowrap font-bold">No results</div>
 						)}
@@ -41,7 +41,7 @@ const App = () => {
 								</div>
 							</>
 						)}
-					</section>
+					</main>
 				</div>
 			</div>
 		</div>
