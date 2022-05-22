@@ -19,7 +19,11 @@ const UserLinks = ({ user }) => {
 						<path d="M13.439 13.75a.401.401 0 00.006-.003c.659-1.204.788-2.586.48-3.933l-.002.002-.001-.001a5.434 5.434 0 00-2.19-3.124.3.3 0 00-.333.015c-.553.448-1.095 1.021-1.452 1.754a.243.243 0 00.096.317c.415.24.79.593 1.04 1.061h.001c.196.33.388.958.263 1.632-.116.894-1.019 1.714-1.736 2.453-.546.559-1.935 1.974-2.49 2.542a2.6 2.6 0 01-3.666.037 2.6 2.6 0 01-.038-3.666l1.521-1.564A.266.266 0 005 11.004c-.338-1.036-.43-2.432-.217-3.51.006-.03-.031-.049-.053-.027l-3.179 3.245c-2.083 2.126-2.066 5.588.04 7.693 2.125 2.083 5.57 2.048 7.653-.078.723-.81 3.821-3.678 4.195-4.577z" />
 					</g>
 				</svg>
-				<a href={user.blog ? user.blog : '#'}>{user.blog.replace('https://', '')}</a>
+				{user.blog ? (
+					<a href={user.blog}>{user.blog.replace('https://', '')}</a>
+				) : (
+					<p>'Not Available'</p>
+				)}
 			</div>
 			<div
 				className={`flex | gap-3 | sm:order-2 | ${
@@ -32,9 +36,11 @@ const UserLinks = ({ user }) => {
 						fill="currentColor"
 					/>
 				</svg>
-				<a href={user.twitter_username ? `https://twitter.com/${user.twitter_username}` : '#'}>
-					{user.twitter_username}
-				</a>
+				{user.twitter_username ? (
+					<a href={user.twitter_username}>{user.twitter_username}</a>
+				) : (
+					<p>Not Available</p>
+				)}
 			</div>
 			<div
 				className={`flex | gap-3 | sm:order-4 | ${user.html_url ? 'opacity-100' : 'opacity-50'}`}
