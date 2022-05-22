@@ -16,7 +16,7 @@ const UserInfo = ({ user }) => {
 
 	return (
 		<>
-			<p className="leading-6">{user.bio}</p>
+			<p className="leading-6">{user.bio ? user.bio : 'This profile has no bio'}</p>
 			<div className="flex items-center justify-between | py-6 px-8 | bg-zircon dark:bg-bigstone | rounded-xl ">
 				{stats.map((stat) => (
 					<div className="flex flex-col | text-center sm:text-left" key={stat.title}>
