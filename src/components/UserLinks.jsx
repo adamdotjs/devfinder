@@ -20,7 +20,7 @@ const UserLinks = ({ user }) => {
 					</g>
 				</svg>
 				{user.blog ? (
-					<a href={user.blog}>{user.blog.replace('https://', '')}</a>
+					<a href={`//${user.blog.replace('https://', '')}`}>{user.blog.replace('https://', '')}</a>
 				) : (
 					<p>'Not Available'</p>
 				)}
@@ -37,7 +37,7 @@ const UserLinks = ({ user }) => {
 					/>
 				</svg>
 				{user.twitter_username ? (
-					<a href={user.twitter_username}>{user.twitter_username}</a>
+					<a href={`https://twitter.com/${user.twitter_username}`}>{user.twitter_username}</a>
 				) : (
 					<p>Not Available</p>
 				)}
